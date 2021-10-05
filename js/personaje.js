@@ -2,8 +2,11 @@
 // Sergio Matamoros
 // Rubén Torres
 
-export class personaje{
+export class Personaje{
     constructor(nombre){
         this.nombre = nombre;
+    }
+    hablar(texto){
+        document.write(`<p>- ${this.nombre}: ${texto}</p>`);
     }
 }
