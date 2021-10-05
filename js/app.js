@@ -44,23 +44,20 @@ class App{
         //Btn elección bien.
         let btnBien = document.createElement('button');
         document.body.appendChild(btnBien);
+        btnBien.addEventListener('click', function(){
+            //Texto aqui
+           
+        });
         btnBien.appendChild(document.createTextNode('Bien'));
 
         //Btn elección mal
         let btnMal = document.createElement('button');
         document.body.appendChild(btnMal);
-        btnMal.appendChild(document.createTextNode('Mal'));
-
-        //Click's botones
-        btnBien.onclick = function() {
+        btnMal.addEventListener('click', function(){
             //Texto aqui
-            let h1 = document.createElement('h1')
-            document.body.appendChild(h1)
-            h1.appendChild(document.createTextNode('REGRESO AL PASADO'));
-            btnBien.disabled = true;
-            btnMal.disabled = true;
-
-        }
+           
+        });
+        btnMal.appendChild(document.createTextNode('Mal'));
 
         btnMal.onclick = function() {
             //Texto aquí
