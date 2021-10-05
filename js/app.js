@@ -52,8 +52,7 @@ class App{
 
         for(let i=1;i<=12;i++){
             let aleatorio = Math.floor(Math.random()*this.personajes.length);
-            this.person
-            ajes[aleatorio].hablar(i);
+            this.personajes[aleatorio].hablar(i);
         }
 
         this.personajes[3].hablar('FELIZ 2020!!!!!!');
@@ -97,17 +96,12 @@ class App{
         //Btn elección bien.
         let btnBien = document.createElement('button');
         document.body.appendChild(btnBien);
-        btnBien.appendChild(document.createTextNode('Bien'));
+        btnBien.addEventListener('click', function(){
 
-        //Btn elección mal
-        let btnMal = document.createElement('button');
-        document.body.appendChild(btnMal);
-        btnMal.appendChild(document.createTextNode('Mal'));
+            this.narrador = new Narrador();
+            this.personaje = new Personas('Juan');
 
-        //Click's botones
-        btnMal.onclick = function(narrador, personaje) {
-
-            narrador.hablar(`${this.personajes[0].nombre}, se lo tomó bien, 
+            this.narrador.hablar(`${this.personaje.nombre}, se lo tomó bien, 
             y le entraron ganas de salvar el mundo, porque él sabía ya todo  
             lo que iba a pasar, y quería evitar el covid-19 a toda costa,
             así que lo que hizo fué, avisar, empezar a hablar con administraciones 
@@ -116,13 +110,25 @@ class App{
             eso provocó que se expusiera demasiado al virus, he hizo que se acabase contagiando
              y finalmente muriendo.`);
 
-            narrador.hablar(`${this.personajes[0].nombre}, realmente debió morir en el año 2020, era su 
+            this.narrador.hablar(`${this.personaje.nombre}, realmente debió morir en el año 2020, era su 
             destino, era lo que estaba elegido, pero a pesar de todas las desgracias de aquel año 
             se salvó, y la muerte... No se equivoca 2 veces.`);
 
-        }
+            btnBien.disabled=true;
+            btnMal.disabled=true;
+           
+        });
+        btnBien.appendChild(document.createTextNode('Bien'));
 
-        btnBien.onclick = function(narrador, personaje, personaje2) {
+        //Btn elección mal
+        let btnMal = document.createElement('button');
+        document.body.appendChild(btnMal);
+        btnMal.addEventListener('click', function(){
+
+            this.narrador = new Narrador();
+            this.personajes = [];
+            this.personajes[0] = new Personas('Juan');
+            this.personajes[1] = new Personas('María');
 
             this.narrador.hablar(`${this.personajes[0].nombre}, se lo tomó mal,
             se encerró en su casa, en su habitación, no salía, no hablaba con nadie
@@ -131,10 +137,15 @@ class App{
              tenía mal aspecto, no le quería nadie, entró en depresión y acabó suicidandose.`);
 
              this.narrador.hablar(`${this.personajes[0].nombre}, realmente debió morir en el año 2020, era su 
-             destino, era lo que estaba elegido, pero a pesar de todas las desgracias de aquel año 
-             se salvó, y la muerte... No se equivoca 2 veces.`);
+            destino, era lo que estaba elegido, pero a pesar de todas las desgracias de aquel año 
+            se salvó, y la muerte... No se equivoca 2 veces.`);
 
-        }
+            btnBien.disabled=true;
+            btnMal.disabled=true;
+           
+        });
+        btnMal.appendChild(document.createTextNode('Mal'));
+
     }
 }
 
