@@ -11,6 +11,11 @@ class App{
 
         window.onload = this.iniciar.bind(this);        
 
+        
+
+    }
+    iniciar(){
+
         //Objetos
         this.narrador = new Narrador();
         this.protagonista = new Personaje('Juan');
@@ -20,9 +25,6 @@ class App{
         this.personaje3 = new Personaje(`Tío de ${this.protagonista.nombre}`);
         this.personaje4 = new Personaje(`Tía de ${this.protagonista.nombre}`);
         this.personaje5 = new Personaje(`Prima de ${this.protagonista.nombre}`);
-
-    }
-    iniciar(){
 
         //Diálogo
         this.narrador.hablar(`Era un 31 de diciembre del año 2021
