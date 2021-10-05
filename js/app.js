@@ -57,6 +57,7 @@ class App{
             let h1 = document.createElement('h1')
             document.body.appendChild(h1)
             h1.appendChild(document.createTextNode('REGRESO AL PASADO'));
+            btnBien.disabled = true;
             btnMal.disabled = true;
 
         }
@@ -67,6 +68,7 @@ class App{
             document.body.appendChild(h1)
             h1.appendChild(document.createTextNode('REGRESO AL PASADO'));
             btnBien.disabled = true;
+            btnMal.disabled = true;
         }
     }
 }
