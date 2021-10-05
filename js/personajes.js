@@ -2,7 +2,7 @@
 // Sergio Matamoros
 // Rubén Torres
 
-export class Personaje{
+export class Personajes{
     constructor(nombre){
         this.nombre = nombre;
     }
