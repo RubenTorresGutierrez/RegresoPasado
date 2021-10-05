@@ -1,6 +1,10 @@
-// Ángel Manuel Fernández
-// Sergio Matamoros
-// Rubén Torres
+/*
+    // Ángel Manuel Fernández
+    // Sergio Matamoros
+    // Rubén Torres
+    // Fecha: 5-10-2021
+    // Licencia: GNU Affero General Public License v3.0
+*/
 
 // Importaciones
 import {Personaje} from './personaje.js';
@@ -8,13 +12,18 @@ import {Narrador} from './narrador.js';
 
 class App{
     constructor(){
-
         window.onload = this.iniciar.bind(this);        
-
-        
-
+        //this.iniciar();
     }
     iniciar(){
+
+        //Título
+        let h1 = document.createElement('h1')
+        document.body.appendChild(h1)
+        h1.appendChild(document.createTextNode('REGRESO AL PASADO'));
+        let h3 = document.createElement('h3')
+        document.body.appendChild(h3)
+        h3.appendChild(document.createTextNode('Cena de noche vieja'));
 
         //Objetos
         this.narrador = new Narrador();
@@ -30,7 +39,6 @@ class App{
         this.narrador.hablar(`Era un 31 de diciembre del año 2021
         cuando la familia de ${this.protagonista.nombre}, se disponia a darle 
         entrada al año nuevo.`);
-        this.per
 
     }
 }
