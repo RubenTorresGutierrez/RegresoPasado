@@ -1,0 +1,21 @@
+body {
+    background-color: #222;
+    color: white;
+}
+
+
+/*
+    - Color del nombre de los personajes.
+*/
+.personajeNombre{
+    color: white;
+    font-weight: bold;
+}
+
+.narrador {
+    font-style: italic;
+}
+
+.colorTelevision {
+    color: #6feb2d;
+}

@@ -4,6 +4,11 @@
 
 export class Narrador {
     hablar(texto){
-        document.write(`<p class="narrador">- ${texto}</p>`);
+        let p = document.createElement("p");
+        document.body.appendChild(p);
+        p.appendChild(document.createTextNode(texto));
+        p.classList.add('narrador');
+        //p.id = 
+        //document.write(`<p class="narrador">- ${texto}</p>`);
     }
 }
